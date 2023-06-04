@@ -176,7 +176,7 @@ if (!isset($_SESSION["id"])) {
             $id = $_SESSION['id'];
             $mydate=getdate(date("U"));
             $date =  "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
-            $sql = "INSERT INTO history(date,disease,id) VALUES('$date','$output','$id')";
+            $sql = "INSERT INTO history(date,disease,id_user) VALUES('$date','$output','$id')";
             $result = mysqli_query($conn, $sql);
             ?>
 

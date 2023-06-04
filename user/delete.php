@@ -2,7 +2,7 @@
 	session_start();
 	include_once('conn.php');
 
-	$id = $_SESSION['id'];
+	$id = $_GET['id'];
 
 	if(isset($id)){
 		$sql1 = "SELECT * FROM history WHERE id = {$id}";

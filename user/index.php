@@ -167,9 +167,9 @@
                 <h1 class="text-3xl">DocBot</h1>
                 <p class="mt-5 text-lg">DocBot build with Machine Learning approach that can detect disease and suggest some specialized doctor based on that detected disease from patients speech of symptoms. </p>
 
-                <a href="about.php"><button class="mt-10 bg-white px-7 py-3 rounded-xl">Read More</button></a>
+                <a href="about.php"><button class="mt-5 bg-white px-7 py-3 rounded-xl">Read More</button></a>
                 </div>
-                <div class="mt-60">
+                <div class="mt-32">
                     <h1 class="text-5xl text-right">Our Services</h1>
                   
 
@@ -178,7 +178,7 @@
                </div>
             <img src="./images/doctor_home.png" alt="" class="">
             </div>
-            <div class="grid grid-cols-5 text-center gap-5 -mt-[500px]">
+            <div class="grid grid-cols-5 text-center gap-5 -mt-[600px]">
                         <div><a href="disease-speech.php"><button class="services flex flex-col justify-center items-center p-7 h-96">
                             <h1>Disease Prediction With Speech</h1>
                            <img src="./images/mick.png" alt="">

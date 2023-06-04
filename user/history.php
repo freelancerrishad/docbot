@@ -168,7 +168,7 @@ if (!isset($_SESSION["id"])) {
             <div class="grid grid-cols-3 gap-10">
                 <?php
                 $id = $_SESSION['id'];
-                $sql =  "SELECT * FROM history INNER JOIN signup ON history.id = signup.id WHERE signup.id = $id";
+                $sql =  "SELECT * FROM history INNER JOIN signup ON history.id_user = signup.id WHERE signup.id = $id";
                 $result = mysqli_query($conn, $sql) or die("Query Failed");
 
                 if (mysqli_num_rows($result) > 0) {
@@ -183,7 +183,7 @@ if (!isset($_SESSION["id"])) {
                             <p class="mb-3 font-normal text-gray-700 text-center mt-5"><?php echo $row['disease'] ; ?></p>
                             <p class="mb-3 font-normal text-gray-700 text-center mt-5 text-rose-500"><?php echo $row['date'] ; ?></p>
                            
-                            <a href="delete.php" class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                            <a href="delete.php?id=<?php echo $row['id']?>" class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                                 Delete
                                
                             </a>
