@@ -160,7 +160,7 @@
 
         </div>
 
-        <div class="px-16 mt-5 text flex justify-center">
+        <div class="px-16 mt-5 text">
             <?php 
              $disease = $_GET['disease'];
              ?>
@@ -173,14 +173,23 @@
 
                     while ($row =  mysqli_fetch_assoc($result)) {
                 ?>
-            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 mt-24 ">
+            <div class="mt-24">
               <?php 
               if($row['Precaution_1']){
-                echo "<p class='bg-['>".$row['Precaution_1']."</p>";
+                echo "<p class='bg-sky-600 text-white py-3 rounded-xl text-3xl text-center'>".$row['Precaution_1']."</p>";
+              }
+              if($row['Precaution_2']){
+                echo "<p class='bg-sky-600 text-white py-3 rounded-xl text-3xl text-center mt-10'>".$row['Precaution_2']."</p>";
+              }
+              if($row['Precaution_3']){
+                echo "<p class='bg-sky-600 text-white py-3 rounded-xl text-3xl text-center mt-10'>".$row['Precaution_3']."</p>";
+              }
+              if($row['Precaution_4']){
+                echo "<p class='bg-sky-600 text-white py-3 rounded-xl text-3xl text-center mt-10'>".$row['Precaution_4']."</p>";
               }
               ; ?>
             </div>
-
+              <a href="specialized.php?disease=<?php echo $disease?>"><button class="px-5 py-2 bg-[#FD6D2F] rounded-xl text-white text-3xl mt-14">View a specialized doctor</button></a>
         </div>
 <?php  }}?>
 
