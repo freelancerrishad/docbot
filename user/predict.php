@@ -221,4 +221,6 @@ if (!isset($_SESSION["id"])) {
         });
     </script>
 
-</body>
+</body>
+
+</html>

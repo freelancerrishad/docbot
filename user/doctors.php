@@ -163,18 +163,33 @@ if (!isset($_SESSION["id"])) {
 
         </div>
 
-        <div class="px-16 mt-5 text">
+        <div class="px-16 mt-5 text flex flex-col justify-center items-center bg-[url(./images/doctorsbg.png)] w-full h-965">
+            <h1 class="text-5xl">DOCTOR PROFILE</h1>
+        <?php
+                $id = $_GET['id'];
+                $sql =  "SELECT * FROM dr_info WHERE id=$id";
+                $result = mysqli_query($conn, $sql) or die("Query Failed");
 
-            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="">
+                if (mysqli_num_rows($result) > 0) {
+
+                    while ($row =  mysqli_fetch_assoc($result)) {
+                ?>
+            <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 mt-24 ">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="./images/<?php echo $row['img'] ; ?>" alt="">
                 <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Noteworthy technology acquisitions 2021</h5>
-                    <p class="mb-3 font-normal text-gray-700 ">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <h5 class="mb-2 text-2xl tracking-tight text-gray-900 "><b>Dr. Name: </b><?php echo $row['dr_name'] ; ?></h5>
+                    <p class="mb-3 font-normal text-gray-700 "><b>Degree:</b><?php echo $row['Degree'] ; ?></p>
+                    <p class="mb-3 font-normal text-gray-700 "><b>Specialized On:</b><?php echo $row['specialized'] ; ?></p>
+                    <p class="mb-3 font-normal text-gray-700 "><b>Education Institute:</b><?php echo $row['institution'] ; ?></p>
+                    <div class="flex justify-between gap-10">
+                        <button class="flex items-center bg-green-700 text-white px-3 py-2 rounded-xl"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;<?php echo $row['dr_phone'] ; ?></button>
+                        <button class="flex items-center bg-green-700 text-white px-3 py-2 rounded-xl"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;<?php echo $row['dr_Email'] ; ?></button>
+                    </div>
                 </div>
             </div>
 
         </div>
-
+<?php  }}?>
     </section>
     <script src="https://cdn.tailwindcss.com"></script>
 
