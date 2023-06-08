@@ -163,7 +163,8 @@
         <div class="px-16 mt-5 text flex justify-center">
             <?php 
              $disease = $_GET['disease'];
-             $sql = "SELECT * FROM dr_info WHERE specialized = '$disease'";
+             
+             $sql = "SELECT * FROM dr_info WHERE disease_Name = '$disease'";
              $result = mysqli_query($conn, $sql) or die("Query Failed");
 
                 if (mysqli_num_rows($result) > 0) {

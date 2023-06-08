@@ -163,7 +163,7 @@
         <div class="px-16 mt-5 text">
             <h1 class="text-4xl text-red-700">Report a problem</h1>
             <form action="reportAction.php" method="post">
-                <textarea name="report" id="" cols="150" rows="20" class="mt-5 rounded-xl"></textarea><br><br>
+                <textarea name="report" id="" cols="130" rows="20" class="mt-5 rounded-xl"></textarea><br><br>
                 <button class="mt-5 bg-[#FD6D2F] text-white text-3xl px-5 py-2 rounded-xl">Submit</button>
             </form>
         </div>

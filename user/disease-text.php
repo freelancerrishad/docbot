@@ -165,7 +165,7 @@
             <div>
             <center>
 
-    <form class="flex flex-col gap-10 justify-center items-center mt-80" action="predict.php" method="post">
+    <form class="flex flex-col gap-10 justify-center items-center mt-14" action="predict.php" method="post">
     <!-- <i class="fa-solid fa-microphone border-4 border-rose-300 rounded-full w-20 h-20 text-5xl flex justify-center items-center"></i> -->
        
         <textarea name="record_text" id="convert_text" cols="100" rows="5" class="mt-5 border border-blue-300 focus:border-rose-300 rounded-xl"></textarea>

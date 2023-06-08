@@ -99,6 +99,7 @@
   }
 #back{
     background-image: url(./images/doctor_bg.png);
+    height: 700px;
 }
    </style>
     <!-- tailwind css -->
@@ -112,7 +113,7 @@
 
 <body>
 
-    <div id="spinner1" class="bg-blue-500 h-[950px] flex justify-center items-center flex-col">
+    <div id="spinner1" class="bg-blue-500 h-[700px] flex justify-center items-center flex-col">
 
         <div class="flex justify-center items-center flex-col">
             <span class="loader"></span>
@@ -125,14 +126,14 @@
 
         <div class="h-[59em] md:w-3/4 lg:w-full
             md:bg-contain lg:bg-cover" id="back">
-            <img src='./images/doctor1.png' alt="" class="h-[46em] mt-52 ml-14">
+            <img src='./images/doctor1.png' alt="" class="h-[28em] mt-52 ml-14">
         </div>
         <div class="ml-14 mt-10">
 
 
 
 
-            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="flex flex-col items-center justify-center px-6 py-3 mx-auto md:h-screen lg:py-0">
 
                 <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -162,12 +163,15 @@
                                 class="w-full text-white bg-blue-600 hover:bg-[#32B4D0] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">Sign
                                 in</button>
                         </form>
-                        <br>
+                       
+                        
+                       
                         <h1 class="text-center">OR</h1>
-                        <br>
-                        <button type="submit"
-                            class="w-full text-white bg-blue-600 hover:bg-[#32B4D0] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "><i class="fa-brands fa-google"></i> Continue With Google</button>
-                        <p class="text-sm font-light text-gray-800 ">
+                        
+                        <a type='submit' href="hospital.php"
+                            class="w-full text-white bg-blue-600 hover:bg-[#32B4D0] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "><i class="fas fa-hospital mr-2"></i> Login as a hospital</a>
+                        
+                            <p class="text-sm font-light text-gray-800 ">
                             Don’t have an account yet? <a href="signup.php"
                                 class="font-medium text-primary-600 hover:underline ">Sign up</a>
                         </p>

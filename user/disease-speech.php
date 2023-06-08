@@ -164,11 +164,11 @@
             <div>
             <center>
 
-    <form class="flex flex-col gap-10 justify-center items-center mt-96" action="predict.php" method="post">
+    <form class="flex flex-col gap-10 justify-center items-center mt-5" action="predict.php" method="post">
     <!-- <i class="fa-solid fa-microphone border-4 border-rose-300 rounded-full w-20 h-20 text-5xl flex justify-center items-center"></i> -->
         <div id="click_to_record" class="cursor-pointer"><img src="images/press-mick.png" alt=""></div>
         <p>Please Tap Or Select To Start Talking</p>
-        <textarea name="record_text" id="convert_text" cols="100" rows="5" class="mt-5 border border-blue-300 focus:border-rose-300 rounded-xl" disabled></textarea>
+        <textarea name="record_text" id="convert_text" cols="100" rows="5" class="mt-5 border border-blue-300 focus:border-rose-300 rounded-xl" ></textarea>
         
         <button class="px-10 py-3 hover:bg-blue-400 hover:text-white border border-blue-500 rounded-xl transition-all duration-200 ease-in	">Submit</button>
 

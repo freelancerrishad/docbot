@@ -18,8 +18,11 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
 from flashtext import KeywordProcessor
 
+
+
 df=pd.read_csv('../notebooks/Unique_symptoms.csv')
 FS =  list(df["Symptoms"])
+
 
 df2=pd.read_csv('../notebooks/datasetE.csv')
 
@@ -54,23 +57,10 @@ df2 = d.replace('foul smell of urine',0)
 data = df2.iloc[:,1:].values
 labels = df2['Disease'].values
 
-x_train, x_test, y_train, y_test = train_test_split(data, labels, train_size = 0.75,random_state=42)
 
-rfc=RandomForestClassifier(random_state=42)
-rnd_forest = RandomForestClassifier(random_state=42, max_features='sqrt', n_estimators= 500, max_depth=13)
-rnd_forest.fit(x_train,y_train)
-preds=rnd_forest.predict(x_test)
-conf_mat = confusion_matrix(y_test, preds)
-df_cm = pd.DataFrame(conf_mat, index=df2['Disease'].unique(), columns=df2['Disease'].unique())
+import pickle
 
-
-kfold = KFold(n_splits=10,shuffle=True,random_state=42)
-rnd_forest_train =cross_val_score(rnd_forest, x_train, y_train, cv=kfold, scoring='accuracy')
-pd.DataFrame(rnd_forest_train,columns=['Scores'])
-
-kfold = KFold(n_splits=10,shuffle=True,random_state=42)
-rnd_forest_test =cross_val_score(rnd_forest, x_test, y_test, cv=kfold, scoring='accuracy')
-pd.DataFrame(rnd_forest_test,columns=['Scores'])
+rnd_forest = pickle.load(open('./savedModels/rnd_forest','rb'))
 
 def predd(S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17,x):
     psymptoms = [S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,S16,S17]
